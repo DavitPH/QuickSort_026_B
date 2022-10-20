@@ -104,6 +104,13 @@ namespace QuickSort_026_B
             Console.WriteLine("");
             Console.WriteLine("Sorted array elements");
             Console.WriteLine("");
+
+            for (int j = 0; j < n; j++)
+            {
+                Console.WriteLine(arr[j]);
+            }
+            Console.WriteLine("/nNumber of comporisons : ", + cmp_count);
+            Console.WriteLine("/nNumber of data movements : ", +mov_count);
         }
 
         static void Main(string[] args)
