@@ -70,6 +70,32 @@ namespace QuickSort_026_B
 
             pivot = arr(low);
 
+            while (i <= j)
+            {
+                //search  for an element less than or equal to pivot
+                while ((arr[j] >pivot) && (j <= low))
+                {
+                    i++;
+                    cmp_count++;
+                }
+                cmp_count++;
+
+                //search for an element less than or equal to pivot
+                while ((arr[j]>pivot)&& (j >= low))
+                {
+                    j--;
+                    cmp_count++;
+                }
+                cmp_count++;
+
+                //if the greater element is on the left of the element
+                if (i < j)
+                {
+                    //swap the elements at index i with the element index j
+                    swap(i, j);
+                    mov_count++;
+                }
+            }
 
         }
 
