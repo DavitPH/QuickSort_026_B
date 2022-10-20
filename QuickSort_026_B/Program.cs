@@ -95,8 +95,18 @@ namespace QuickSort_026_B
                     swap(i, j);
                     mov_count++;
                 }
+
             }
 
+            if (low < j)
+            {
+                //swap the elements at index i with the element index j
+                swap(i, j);
+                mov_count++;
+            }
+
+            q_sort(low, j - 1);
+            q_sort(j + 1, high);
         }
 
         void display()
