@@ -5,7 +5,7 @@ namespace QuickSort_026_B
     class Program
     {
         //array of integers to hold values
-        private int[] arr = new int [20];
+        private int[] Arr = new int [20];
         private int cmp_count = 0; //number of comporasion
         private int mov_count = 0; //number of data movements
 
@@ -26,7 +26,24 @@ namespace QuickSort_026_B
                 else
                     Console.WriteLine("\nArray can have maximum 20 element \n");
             }
+
+            Console.WriteLine("====================");
+            Console.WriteLine("Enter Array Elements");
+            Console.WriteLine("--------------------");
+
+
+            //get array elements
+            for (int i = 0 ; i < n; i++)
+            {
+                Console.WriteLine("<" + (i+1) + ">");
+                string s1 = Console.ReadLine();
+                Arr(i) = Int32.Parse(s1);
+            }
         }
+
+
+
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
