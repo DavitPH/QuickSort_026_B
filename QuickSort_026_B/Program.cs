@@ -17,7 +17,7 @@ namespace QuickSort_026_B
         {
             while (true)
             {
-                Console.WriteLine("Enter the numbers of elements in the array : ");
+                Console.Write("Enter the numbers of elements in the array : ");
                 string s = Console.ReadLine();
                 n = Int32.Parse(s);
 
@@ -35,7 +35,7 @@ namespace QuickSort_026_B
             //get array elements
             for (int i = 0 ; i < n; i++)
             {
-                Console.WriteLine("<" + (i+1) + ">");
+                Console.Write("<" + (i+1) + ">");
                 string s1 = Console.ReadLine();
                 arr[i] = Int32.Parse(s1);
             }
@@ -73,7 +73,7 @@ namespace QuickSort_026_B
             while (i <= j)
             {
                 //search  for an element less than or equal to pivot
-                while ((arr[j] >pivot) && (j <= low))
+                while ((arr[i] >pivot) && (i <= high))
                 {
                     i++;
                     cmp_count++;
@@ -81,7 +81,7 @@ namespace QuickSort_026_B
                 cmp_count++;
 
                 //search for an element less than or equal to pivot
-                while ((arr[j]>pivot)&& (j >= low))
+                while ((arr[j]>pivot) && (j >= low))
                 {
                     j--;
                     cmp_count++;
@@ -120,7 +120,25 @@ namespace QuickSort_026_B
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //declaring the object of the class
+            Program my_list = new Program();
+
+            //accpet array elements
+            my_list.input();
+
+
+            //caling the sorting function 
+            //first call the QUICK SORT Alogarithm
+
+            my_list.q_sort(0, my_list.getSize() - 1);
+
+            //display started array
+            my_list.display();
+
+            //to exit from the console
+
+            Console.WriteLine("\n\nPress Enter to Exit");
+            Console.Read();
         }
     }
 }
