@@ -113,6 +113,11 @@ namespace QuickSort_026_B
             Console.WriteLine("/nNumber of data movements : ", +mov_count);
         }
 
+        int getSize()
+        {
+            return (n);
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
