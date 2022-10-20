@@ -37,7 +37,7 @@ namespace QuickSort_026_B
             {
                 Console.WriteLine("<" + (i+1) + ">");
                 string s1 = Console.ReadLine();
-                arr(i) = Int32.Parse(s1);
+                arr[i] = Int32.Parse(s1);
             }
         }
 
@@ -68,7 +68,7 @@ namespace QuickSort_026_B
             i = low + 1;
             j = high;
 
-            pivot = arr(low);
+            pivot = arr[low];
 
             while (i <= j)
             {
