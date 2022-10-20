@@ -99,6 +99,13 @@ namespace QuickSort_026_B
 
         }
 
+        void display()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Sorted array elements");
+            Console.WriteLine("");
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
