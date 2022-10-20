@@ -100,8 +100,8 @@ namespace QuickSort_026_B
 
             if (low < j)
             {
-                //swap the elements at index i with the element index j
-                swap(i, j);
+
+                swap(low, j);
                 mov_count++;
             }
 
