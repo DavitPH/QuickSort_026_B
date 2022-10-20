@@ -5,7 +5,7 @@ namespace QuickSort_026_B
     class Program
     {
         //array of integers to hold values
-        private int[] Arr = new int [20];
+        private int[] arr = new int [20];
         private int cmp_count = 0; //number of comporasion
         private int mov_count = 0; //number of data movements
 
@@ -37,10 +37,22 @@ namespace QuickSort_026_B
             {
                 Console.WriteLine("<" + (i+1) + ">");
                 string s1 = Console.ReadLine();
-                Arr(i) = Int32.Parse(s1);
+                arr(i) = Int32.Parse(s1);
             }
         }
 
+        //Swaps the elemets at index x with the elements at index y
+
+        void swap(int x, int y)
+        {
+            int temp;
+
+            temp = arr[x];
+
+            arr[x] = arr[y];
+
+            arr[y] = temp;
+        }
 
 
 
